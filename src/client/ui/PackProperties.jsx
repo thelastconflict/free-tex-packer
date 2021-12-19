@@ -71,28 +71,28 @@ class PackProperties extends React.Component {
         
         data.textureName = data.textureName || "texture";
         data.textureFormat = data.textureFormat || "png";
-        data.removeFileExtension = data.removeFileExtension === undefined ? false : data.removeFileExtension;
-        data.prependFolderName = data.prependFolderName === undefined ? true : data.prependFolderName;
+        data.removeFileExtension = data.removeFileExtension === undefined ? true: data.removeFileExtension;
+        data.prependFolderName = data.prependFolderName === undefined ? false : data.prependFolderName;
         data.scale = data.scale || 1;
         data.filter = getFilterByType(data.filter) ? data.filter : filters[0].type;
-        data.exporter = getExporterByType(data.exporter) ? data.exporter : exporters[0].type;
+        data.exporter = getExporterByType(data.exporter) ? data.exporter : exporters[1].type;
         data.base64Export = data.base64Export === undefined ? false : data.base64Export;
         data.tinify = data.tinify === undefined ? false : data.tinify;
         data.tinifyKey = data.tinifyKey === undefined ? "" : data.tinifyKey;
         data.fileName = data.fileName || "pack-result";
         data.savePath = data.savePath || "";
-        data.width = data.width === undefined ? 2048 : data.width;
-        data.height = data.height === undefined ? 2048 : data.height;
+        data.width = data.width === undefined ? 512: data.width;
+        data.height = data.height === undefined ? 512: data.height;
         data.fixedSize = data.fixedSize === undefined ? false : data.fixedSize;
         data.powerOfTwo = data.powerOfTwo === undefined ? false : data.powerOfTwo;
-        data.padding = data.padding === undefined ? 0 : data.padding;
+        data.padding = data.padding === undefined ? 2 : data.padding;
         data.extrude = data.extrude === undefined ? 0 : data.extrude;
-        data.allowRotation = data.allowRotation === undefined ? true : data.allowRotation;
+        data.allowRotation = data.allowRotation === undefined ? false : data.allowRotation;
         data.allowTrim = data.allowTrim === undefined ? true : data.allowTrim;
         data.trimMode = data.trimMode === undefined ? "trim" : data.trimMode;
         data.alphaThreshold = data.alphaThreshold || 0;
         data.detectIdentical = data.detectIdentical === undefined ? true : data.detectIdentical;
-        data.packer = getPackerByType(data.packer) ? data.packer : packers[0].type;
+        data.packer = getPackerByType(data.packer) ? data.packer : packers[1].type;
         
         let methodValid = false;
         let packer = getPackerByType(data.packer);

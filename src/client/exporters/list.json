@@ -11,7 +11,7 @@
     "type": "JSON (array)",
     "description": "Json array",
     "allowTrim": true,
-    "allowRotation": true,
+    "allowRotation": false,
     "template": "JsonArray.mst",
     "fileExt": "json"
   },
